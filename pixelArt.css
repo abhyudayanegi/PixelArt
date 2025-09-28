@@ -108,8 +108,10 @@ input[type="number"] {
 
 .pixel {
   background-color: var(--pixel-bg);
+  gap: 1px;
   border-radius: 1px;
   transition: background-color 0.1s;
+
 }
 
 @media (max-width: 768px) {

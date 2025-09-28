@@ -55,4 +55,21 @@ resetBtn.onclick = () => {
         createPixelGrid(size);
     randomColorBtn.onclick = fetchRandomColor;
 }
+
 createPixelGrid(size);
+
+const toggleGridBtn = document.querySelector(".toggleGridBtn");
+let gridShow = true;
+
+toggleGridBtn.onclick = () => {
+    gridShow = !gridShow;
+    container.style.gap = gridShow ? "1px" : "0";
+    toggleGridBtn.textContent = gridShow ? "Remove Grid" : "Add Grid";
+};
+
+resetBtn.onclick = () => {
+    if (confirm("Are you sure you want to reset the board?")) {
+        createPixelGrid(size);
+        container.style.gap = gridShow ? "1px" : "0";
+    }
+};
